@@ -1,7 +1,15 @@
+import { TextInput, View } from "react-native";
+
+import PrimaryButton from "../components/PrimaryButton";
+
 function StartScreen() {
   return (
-    <div>StartScreen</div>
-  )
+    <View>
+      <TextInput />
+      <PrimaryButton>Reset</PrimaryButton>
+      <PrimaryButton>Confirm</PrimaryButton>
+    </View>
+  );
 }
 
-export default StartScreen
+export default StartScreen;
