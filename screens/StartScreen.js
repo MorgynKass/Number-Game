@@ -5,7 +5,13 @@ import PrimaryButton from "../components/PrimaryButton";
 function StartScreen() {
   return (
     <View style={styles.inputContainer}>
-      <TextInput style={styles.input} maxLength={2}/>
+      <TextInput
+        style={styles.input}
+        maxLength={2}
+        keyboardType="number-pad"
+        autoCorrect={false}
+        returnKeyType="done"
+      />
       <PrimaryButton>Reset</PrimaryButton>
       <PrimaryButton>Confirm</PrimaryButton>
     </View>
