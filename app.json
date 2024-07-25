@@ -1,13 +1,14 @@
 {
   "expo": {
-    "name": "number-game",
+    "name": "Number Game",
     "slug": "number-game",
     "version": "1.0.0",
+    "githubUrl": "https://github.com/MorgynKass/Number-Game",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/images/background.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/images/background.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -16,12 +17,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/images/background.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/images/background.png"
     }
   }
 }
