@@ -1,7 +1,21 @@
+import { StyleSheet, View, Text } from "react-native";
+
 function GameScreen() {
   return (
-    <div>GameScreen</div>
-  )
+    <View style={styles.gameContainer}>
+      <Text>Opponent's Guess</Text>
+      <View>
+        <Text>Higher or Lower</Text>
+      </View>
+    </View>
+  );
 }
 
-export default GameScreen
+const styles = StyleSheet.create({
+  gameContainer: {
+    flex: 1,
+    padding: 40,
+  },
+});
+
+export default GameScreen;

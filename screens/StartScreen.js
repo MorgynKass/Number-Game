@@ -3,7 +3,7 @@ import { TextInput, View, StyleSheet, Alert } from "react-native";
 
 import PrimaryButton from "../components/PrimaryButton";
 
-function StartScreen() {
+function StartScreen({ onNumber }) {
   const [enteredNumber, setEnteredNumber] = useState("");
 
   function inputHandler(enteredText) {
@@ -22,21 +22,26 @@ function StartScreen() {
         { text: "Okay", style: "destructive", onPress: resetInputHandler },
       ]);
 
+      console.log(number);
       return;
     }
+
+    onNumber(number);
   }
 
   return (
-    <View style={styles.inputContainer}>
-      <TextInput
-        style={styles.input}
-        maxLength={2}
-        keyboardType="number-pad"
-        autoCorrect={false}
-        returnKeyType="done"
-        value={enteredNumber}
-        onChange={inputHandler}
-      />
+    <View style={styles.outerInputContainer}>
+      <View style={styles.innerInputContainer}>
+        <TextInput
+          style={styles.input}
+          maxLength={2}
+          keyboardType="number-pad"
+          autoCorrect={false}
+          returnKeyType="done"
+          value={enteredNumber}
+          onChangeText={inputHandler}
+        />
+      </View>
       <View style={styles.buttonContainer}>
         <View style={styles.button}>
           <PrimaryButton onPress={resetInputHandler}>Reset</PrimaryButton>
@@ -50,7 +55,7 @@ function StartScreen() {
 }
 
 const styles = StyleSheet.create({
-  inputContainer: {
+  outerInputContainer: {
     justifyContent: "center",
     alignItems: "center",
     marginTop: 100,
@@ -68,14 +73,23 @@ const styles = StyleSheet.create({
     // borderWidth: 2,
     // borderColor: "red",
   },
+  innerInputContainer: {
+    width: 100,
+    height: 60,
+    alignItems: "center",
+    marginTop: 11,
+    backgroundColor: "#434d6d",
+    borderRadius: 10,
+  },
   input: {
-    height: 50,
-    width: 50,
-    fontSize: 32,
+    height: 40,
+    width: 55,
+    marginVertical: 9,
+    fontSize: 35,
     borderBottomColor: "#FFCBCB",
     borderBottomWidth: 2,
     color: "#FFCBCB",
-    marginVertical: 8,
+
     fontWeight: "bold",
     textAlign: "center",
 
@@ -85,7 +99,8 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     flexDirection: "row",
-    marginTop: 5,
+    marginTop: 15,
+    marginBottom: 11,
   },
   button: {
     flex: 1,
