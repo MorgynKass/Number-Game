@@ -16,7 +16,7 @@ export default function App() {
   let screen = <StartScreen onNumber={startGameHandler} />;
 
   if (userNumber) {
-    screen = <GameScreen />;
+    screen = <GameScreen userNumber={userNumber} />;
   }
 
   return (
