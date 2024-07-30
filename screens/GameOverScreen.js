@@ -35,11 +35,11 @@ const styles = StyleSheet.create({
     fontFamily: "Montserrat_400Regular",
     fontSize: 20,
     textAlign: "center",
-    color: Colors.white,
+    color: Colors.secondary,
   },
   subText: {
     fontFamily: "Montserrat_700Bold",
-    color: Colors.secondary,
+    color: Colors.white,
   },
   button: { flex: 1 },
 });
