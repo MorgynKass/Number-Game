@@ -36,7 +36,7 @@ function StartScreen({ onNumber }) {
   }
 
   return (
-    <View style={styles.rootContainer}>
+    <View style={styles.root}>
       <Title>Guess My Number</Title>
       <Card>
         <InstructionText>Enter a number</InstructionText>
@@ -65,7 +65,7 @@ function StartScreen({ onNumber }) {
 }
 
 const styles = StyleSheet.create({
-  rootContainer: {
+  root: {
     flex: 1,
     marginTop: 100,
   },

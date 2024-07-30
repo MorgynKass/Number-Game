@@ -2,8 +2,8 @@ import { View, Text, TextInput, StyleSheet } from "react-native";
 
 import Colors from "../../constants/Colors";
 
-function Card({ children }) {
-  return <View style={styles.card}>{children}</View>;
+function Card({ children, style }) {
+  return <View style={[styles.card, style]}>{children}</View>;
 }
 
 const styles = StyleSheet.create({

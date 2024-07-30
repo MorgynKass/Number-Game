@@ -51,7 +51,7 @@ function GameScreen({ userNumber, onGameOver }) {
   }
 
   return (
-    <View style={styles.gameContainer}>
+    <View style={styles.root}>
       <Title>Opponent's Guess</Title>
       <NumberContainer>{currentGuess}</NumberContainer>
       <Card>
@@ -74,7 +74,7 @@ function GameScreen({ userNumber, onGameOver }) {
 }
 
 const styles = StyleSheet.create({
-  gameContainer: {
+  root: {
     flex: 1,
     marginTop: 100,
   },
