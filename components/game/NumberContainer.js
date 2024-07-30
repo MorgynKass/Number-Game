@@ -11,18 +11,19 @@ function NumberContainer({ children }) {
 
 const styles = StyleSheet.create({
   container: {
-    margin: 24,
-    padding: 24,
+    marginTop: 40,
+    marginBottom: 15,
     justifyContent: "center",
     alignItems: "center",
-    borderWidth: 4,
-    borderColor: Colors.accentLightBlue,
-    borderRadius: 8,
   },
   numberText: {
-    color: Colors.accentLightBlue,
-    fontSize: 36,
+    padding: 30,
+    color: Colors.accentDarkBlue,
+    fontSize: 40,
     fontWeight: "bold",
+    borderWidth: 2,
+    borderColor: Colors.white,
+    borderRadius: 55,
   },
 });
 

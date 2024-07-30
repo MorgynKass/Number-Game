@@ -1,19 +1,33 @@
 import React from "react";
-import { StyleSheet, Text } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
-function Title({children}) {
-  return <Text style={styles.title}>{children}</Text>;
+import Colors from "../../constants/Colors";
+
+function Title({ children }) {
+  return (
+    <View style={styles.titleContainer}>
+      <Text style={styles.title}>{children}</Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
+  titleContainer: {
+    marginHorizontal: 24,
+    backgroundColor: Colors.accentDarkBlue,
+    borderRadius: 8,
+    elevation: 4,
+    shadowColor: "black",
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 6,
+    shadowOpacity: 0.25,
+  },
   title: {
-    fontSize: 18,
-    fontWeight: "bold",
-    // color: "",
-    textAlign: "center",
-    borderWidth: 2,
-    // borderColor: "",
     padding: 12,
+    fontSize: 30,
+    fontWeight: "bold",
+    color: Colors.white,
+    textAlign: "center",
   },
 });
 
