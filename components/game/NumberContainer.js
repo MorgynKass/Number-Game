@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     padding: 30,
     color: Colors.accentDarkBlue,
     fontSize: 40,
-    fontWeight: "bold",
+    fontFamily: "Montserrat_700Bold",
     borderWidth: 2,
     borderColor: Colors.white,
     borderRadius: 55,

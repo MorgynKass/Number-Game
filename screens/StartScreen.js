@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     borderBottomColor: Colors.secondary,
     borderBottomWidth: 2,
     color: Colors.secondary,
-
+    fontFamily: "Montserrat_700Bold",
     fontWeight: "bold",
     textAlign: "center",
 

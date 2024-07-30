@@ -23,9 +23,9 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
   },
   title: {
+    fontFamily: "Montserrat_700Bold",
     padding: 12,
     fontSize: 30,
-    fontWeight: "bold",
     color: Colors.white,
     textAlign: "center",
   },

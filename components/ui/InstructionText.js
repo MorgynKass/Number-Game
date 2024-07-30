@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
   instructionText: {
     color: Colors.white,
     fontSize: 20,
+    fontFamily: "Montserrat_400Regular",
   },
 });
 

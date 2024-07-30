@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
     color: Colors.white,
     textAlign: "center",
     fontSize: 15,
+    fontFamily: "Montserrat_400Regular",
   },
   buttonPressed: {
     opacity: 0.75,
