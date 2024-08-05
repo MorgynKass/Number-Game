@@ -7,18 +7,18 @@ import PrimaryButton from "../components/ui/PrimaryButton";
 import ButtonContainer from "../components/ui/ButtonContainer";
 import Card from "../components/ui/Card";
 
-function GameOverScreen({ userNumber }) {
+function GameOverScreen({ userNumber, rounds, onStartNewGame }) {
   return (
     <View style={styles.root}>
       <Title>Game Over!</Title>
       <Card style={styles.gameOverCard}>
         <Text style={styles.mainText}>
           Computer guessed <Text style={styles.subText}>{userNumber}</Text> in
-          <Text style={styles.subText}>Y</Text> rounds.
+          <Text style={styles.subText}> {rounds}</Text> rounds.
         </Text>
         <ButtonContainer>
           <View style={styles.button}>
-            <PrimaryButton>Start New Game</PrimaryButton>
+            <PrimaryButton onPress={onStartNewGame}>Start New Game</PrimaryButton>
           </View>
         </ButtonContainer>
       </Card>
