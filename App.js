@@ -47,13 +47,14 @@ export default function App() {
     setGameOver(false);
   }
 
-  function gameOverHandler() {
+  function gameOverHandler(numberOfRounds) {
     setGameOver(true);
+    setRounds(numberOfRounds);
   }
 
   function startNewGameHandler() {
-    setUserNumber(null)
-    setRounds(0)
+    setUserNumber(null);
+    setRounds(0);
   }
 
   let screen = <StartScreen onNumber={startGameHandler} />;

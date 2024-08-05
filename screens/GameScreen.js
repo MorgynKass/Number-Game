@@ -22,10 +22,11 @@ function GameScreen({ userNumber, onGameOver }) {
   const [currentGuess, setCurrentGuess] = useState(() =>
     generateRandomNumber(minBoundary, maxBoundary)
   );
+  const [rounds, setRounds] = useState([currentGuess]);
 
   useEffect(() => {
     if (currentGuess === userNumber) {
-      onGameOver();
+      onGameOver(rounds.length);
     }
   }, [currentGuess, userNumber, onGameOver]);
 
@@ -52,7 +53,10 @@ function GameScreen({ userNumber, onGameOver }) {
       minBoundary = currentGuess + 1;
     }
 
-    setCurrentGuess(generateRandomNumber(minBoundary, maxBoundary));
+    const newRndNumber = generateRandomNumber(minBoundary, maxBoundary);
+
+    setCurrentGuess(newRndNumber);
+    setRounds((prevRounds) => [newRndNumber, ...prevRounds]);
   }
 
   return (
